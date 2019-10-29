@@ -1,0 +1,312 @@
+{
+  "settings": {
+    "name": "Hypen-clone",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#ff3366",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Rubik",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Rubik",
+        "display7Size": 1,
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#333333",
+        "#7289da",
+        "#2c2f33"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.10.15",
+    "siteFonts": [],
+    "uniqCompNum": 4,
+    "versionPublish": "4.11.4",
+    "screenshot": "screenshot.png",
+    "favicon": "@PROJECT_PATH@/assets/images/hypen-128x128.png",
+    "noImageResize": "",
+    "siteUrl": "https://hypen.org",
+    "google-analytics": "",
+    "cookiesAlert": {
+      "colorText": "#424a4d",
+      "colorBg": "#eaeff1",
+      "colorLink": "#424a4d",
+      "underlineLink": true,
+      "opacity": "99",
+      "text": "We use cookies to give you the best experience. Read our <a href='privacy.html'>cookie policy</a>."
+    },
+    "sitemapSwitcherAuto": true,
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "robotsSwitcher": true,
+    "sitemapSwitcher": true,
+    "gdpr": {
+      "colorText": "#a7a7a7",
+      "colorLink": "#149dcc",
+      "underlineLink": false,
+      "text": "By continuing you agree to our <a href='terms.html'>Terms of Service</a> and <a href='policy.html'>Privacy Policy</a>."
+    },
+    "": "on"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Hypen｜Home",
+        "meta_descr": "The best discord bot around",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"9\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"9\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/es4ixk3-1920x1080.png\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#7289da\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#7289da\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">WELCOME TO HYPEN.ORG</h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">This is the place with all the information</h3>\n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"></p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-info\" href=\"install.html\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"socicon socicon-discord mbr-iconfont mbr-iconfont-btn\" style=\"font-size: 25px;\"></span>ADD TO SERVER</a> <a class=\"btn btn-md btn-info\" href=\"https://hypen.org/bots\" data-app-placeholder=\"Type Text\"><span class=\"mbri-search mbr-iconfont mbr-iconfont-btn\" style=\"font-size: 25px;\"></span>GETTING STARTED</a></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rDinpmwG4J",
+          "_anchor": "header1-3",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_params": {
+            "modalName": "download",
+            "modalSize": "medium",
+            "modalHeader": true,
+            "modalTitle": "You haven't install the bot yet?",
+            "modalBody": "This process takes less than 2 minutes to achieve, add Hypen to you're server now!",
+            "modalBodyHTML": false,
+            "modalFooter": true,
+            "modalCloseBtn": true,
+            "modalCloseText": "CLOSE",
+            "modalLink": true,
+            "modalLinkUrl": "https://www.hypen.org/install",
+            "modalLinkText": "ADD TO SERVER",
+            "modalLinkNewWindow": true,
+            "modalVerticalCenter": true,
+            "modalFade": true,
+            "modalAutoOpen": true,
+            "modalAutoOpenOnce": true,
+            "modalAutoOpenGDPR": false,
+            "modalAutoOpenDelay": "10"
+          },
+          "modalTest": "<div class=\"mbr-section-btn\">\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#download\">Preview download</a>\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#download-howtouse\">How to use download</a>\n</div>\n<div class=\"modal fade\" id=\"download-howtouse\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"download-howtouseLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\" style=\"height:auto\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"download-howtouseLabel\">How to use?</h5>\n        <a href=\"\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>\n      </div>\n      <div class=\"modal-body\">\n        Using your new modal is very easy. Simply create a new link, then click the \"...\" tab and enter the following as custom URL:<br /><br />\n        <code>javascript:OpenModal('download')</code>\n      </div>\n      <div class=\"modal-footer\">\n        <div class=\"mbr-section-btn\"><a href=\"#\" class=\"btn btn-secondary display-4\" data-dismiss=\"modal\">Close</a></div>\n      </div>\n    </div>\n  </div>\n</div>",
+          "modalBody": "This process takes less than 2 minutes to achieve, add Hypen to you're server now!",
+          "alias": "witsec-modal-window",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "witsec-modal-window-block",
+          "_anchor": "witsec-modal-window-block-4",
+          "modalWindow": "<div class=\"modal fade\" id=\"download\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"downloadLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  modal-dialog-centered\" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-header\">  <h5 class=\"no-anim modal-title\" id=\"downloadLabel\">You haven't install the bot yet?</h5>  <a href=\"#\" class=\"no-anim close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a></div><div class=\"modal-body\" id=\"download_body\">This process takes less than 2 minutes to achieve, add Hypen to you're server now!</div><div class=\"modal-footer\"><div class=\"mbr-section-btn\"><a href=\"#\" class=\"no-anim btn btn-secondary display-4\" data-dismiss=\"modal\">CLOSE</a></div><div class=\"mbr-section-btn\"><a href=\"https://www.hypen.org/install\" class=\"no-anim btn btn-primary display-4\" target=_new>ADD TO SERVER</a></div></div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#download\").on(\"hidden.bs.modal\", function () {    var html = $( \"#download_body\" ).html();    $( \"#download_body\" ).empty();    $( \"#download_body\" ).append(html);  })});</script>"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            },
+            "h4": {
+              "text-align": "center"
+            },
+            "p": {
+              "text-align": "center"
+            },
+            ".card-img span": {
+              "font-size": "96px",
+              "color": "#149dcc"
+            },
+            ".card-title, .card-img": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "features1",
+          "_customHTML": "<section class=\"features1\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"5\"> \n        \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/es4ixk3-1920x1080.png\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#2c2f33\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-img pb-3\">\n                    <span mbr-icon class=\"mbr-iconfont mbri-music\" style=\"font-size: 96px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);\"></span>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title py-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n                        Music</h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                        Hypen uses a High Quality audio player when playing audio. The bot also uses a queue system for users to save many songs to play throughout the day,</p>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-img pb-3\">\n                    <span mbr-icon class=\"mbr-iconfont mbri-database\" style=\"color: rgb(255, 255, 255); fill: rgb(255, 255, 255); font-size: 96px;\"></span>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title py-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n                        Lag Free</h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                        Hypen has been made to be stable and supply the best quality music and information.</p>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-img pb-3\">\n                    <span mbr-icon class=\"mbr-iconfont mbri-cursor-click\" style=\"font-size: 96px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);\"></span>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title py-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n                        Easy to Use</h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                        No setup required. It only takes one command to get music playing.\n                    </p>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-img pb-3\">\n                    <span mbr-icon class=\"mbri-desktop mbr-iconfont\"></span>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title py-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n                        Unlimited Sites\n                    </h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                       Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.\n                    </p>\n                </div>\n            </div>\n\n        </div>\n\n    </div>\n\n</section>",
+          "_cid": "rGePIGrHBY",
+          "_anchor": "features1-7",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "deltapi-code-editor",
+          "_isSecondary": true,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section": {
+              "text-align": "center",
+              "color": "#fff"
+            }
+          },
+          "_name": "custom-html",
+          "_customHTML": "@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Work+Sans:300,400,700,900');\n* {outline-width: 0;\tfont-family: 'Montserrat' !important;}\n\n#container {\n\theight: 100vh;\n\tbackground-size: cover !important;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n#inviteContainer {\n\tdisplay: flex;\n\toverflow: hidden;\n\tposition: relative;\n\tborder-radius: 5px;\n\t.acceptContainer {\n\t\tpadding: 45px 30px;\n\t\tbox-sizing: border-box;\n\t\twidth: 400px;\n\t\t&amp;:before {\n\t\t\tcontent: \"\";\n\t\t\tbackground-size: cover !important;\n\t\t\tbox-shadow: inset 0 0 0 3000px rgba(40,43,48,.75);\n\t\t\tfilter: blur(10px);\n\t\t\tposition: absolute;\n\t\t\twidth: 150%;\n\t\t\theight: 150%;\n\t\t\ttop: -50px;\n\t\t\tleft: -50px;\n\t\t}\n\t}\n}\nform {\n\tposition: relative;\n\ttext-align: center;\n\theight: 100%;\n\th1 {\n\t\tmargin: 0 0 15px 0;\n\t\tfont-family: 'Work Sans' !important;\n\t\tfont-weight: 700;\n\t\tfont-size: 20px;\n\t\tcolor: #fff;\n\t\tuser-select: none;\n\t}\n}\n.formContainer {\n\ttext-align: left;\n\t.formDiv {\n\t\tmargin-bottom: 30px;\n\t\t&amp;:last-child {\n\t\t\tpadding-top: 10px;\n\t\t\tmargin-bottom: 0;\n\t\t}\n\t}\n\tp {\n\t\tmargin: 0;\n\t\tfont-weight: 700;\n\t\tcolor: #aaa;\n\t\tfont-size: 10px;\n\t\tuser-select: none;\n\t}\n\tinput[type=password], input[type=email] {\n\t\tbackground: transparent;\n\t\tborder: none;\n\t\tbox-shadow: inset 0 -1px 0 rgba(255,255,255,0.15);\n\t\tpadding: 15px 0;\n\t\tbox-sizing: border-box;\n\t\tcolor: #fff;\n\t\twidth: 100%;\n\t\ttransition: 0.2s ease;\n\t\t&amp;:focus {\n\t\t\tbox-shadow: inset 0 -2px 0 #fff;\n\t\t}\n\t}\n}\n.logoContainer {\n\tpadding: 45px 35px;\n\tbox-sizing: border-box;\n\tposition: relative;\n\tz-index: 2;\n\tposition: relative;\n\toverflow: hidden;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n\timg {\n\t\twidth: 150px;\n\t\tmargin-bottom: -5px;\n\t\tdisplay: block;\n\t\tposition: relative;\n\t\t&amp;:first-child {\n\t\t\twidth: 150px;\n\t\t}\n\t}\n\t.text {\n\t\tpadding: 25px 0 10px 0;\n\t}\n\t&amp;:before {\n\t\tcontent: \"\";\n\t\tbackground-size: cover !important;\n\t\tposition: absolute;\n\t\ttop: -50px;\n\t\tleft: -50px;\n\t\twidth: 150%;\n\t\theight: 150%;\n\t\tfilter: blur(10px);\n\t\tbox-shadow: inset 0 0 0 3000px rgba(255,255,255,0.8);\n\t}\n}\n.forgotPas {\n\tcolor: #aaa;\n\topacity: .8;\n\ttext-decoration: none;\n\tfont-weight: 700;\n\tfont-size: 10px;\n\tmargin-top: 15px;\n\tdisplay: block;\n\ttransition: 0.2s ease;\n\t&amp;:hover {\n\t\topacity: 1;\n\t\tcolor: #fff;\n\t}\n}\n.acceptBtn {\n\twidth: 100%;\n\tbox-sizing: border-box;\n\tbackground: #7289DA;\n\tborder: none;\n\tcolor: #fff;\n\tpadding: 20px 0;\n\tborder-radius: 3px;\n\tcursor: pointer;\n\ttransition: 0.2s ease;\n\tuser-select: none;\n\t&amp;:hover {\n\t\tbackground: #6B7FC5;\n\t}\n}\n.register {\n\tcolor: #aaa;\n\tfont-size: 12px;\n\tpadding-top: 15px;\n\tdisplay: block;\n\ta {\n\t\tcolor: #fff;\n\t\ttext-decoration: none;\n\t\tmargin-left: 5px;\n\t\tbox-shadow: inset 0 -2px 0 transparent;\n\t\tpadding-bottom: 5px;\n\t\tuser-select: none;\n\t\t&amp;:hover {\n\t\t\tbox-shadow: inset 0 -2px 0 #fff;\n\t\t}\n\t}\n}",
+          "_anchor": "custom-html-5",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "rGjdAneU34",
+          "_protectedParams": [],
+          "_params": {}
+        },
+        {
+          "alias": "deltapi-code-editor",
+          "_isSecondary": true,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section": {
+              "text-align": "center",
+              "color": "#fff"
+            }
+          },
+          "_name": "custom-html",
+          "_customHTML": "<script src=\"https://cdn.jsdelivr.net/npm/@widgetbot/crate@3\" async defer>\n  new Crate({\n    server: '626483307940675585',\n    channel: '638820043903205416',\n    shard: 'https://disweb.dashflo.net'\n  })\n</script>\n\n<script data-ad-client=\"ca-pub-9083033036901054\" async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>",
+          "_anchor": "custom-html-4",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "rGiVeNSIcd",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "install.html": {
+      "settings": {
+        "meta_descr": "The best discord bot around",
+        "title": "Hypen｜Install",
+        "order": 2
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "P": {
+              "color": "#767676"
+            },
+            "H1": {
+              "color": "#ffffff"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header16",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"9\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"9\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#2c2f33\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"col-md-10 align-center\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    <br>ARE YOU SURE?</h1>\n                <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    You are about to allow this discord bot to join you're discord server/guild<br>Make sure to read the <a href=\"index.html\" class=\"text-primary\">TOS (Terms Of Service)</a></p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-secondary\" href=\"https://discordapp.com/oauth2/authorize?client_id=616949012720779279&scope=bot&permissions=0\" data-app-placeholder=\"Type Text\">I ACCEPT</a> <a class=\"btn btn-md btn-secondary\" href=\"index.html\" data-app-placeholder=\"Type Text\">I DECLINE</a></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rGeG9u5hIv",
+          "_anchor": "header16-6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "deltapi-code-editor",
+          "_isSecondary": true,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section": {
+              "text-align": "center",
+              "color": "#fff"
+            }
+          },
+          "_name": "custom-html",
+          "_customHTML": "<script src=\"https://cdn.jsdelivr.net/npm/@widgetbot/crate@3\" async=\"\" defer=\"\">\n  new Crate({\n    server: '626483307940675585',\n    channel: '626483307940675589',\n    shard: 'https://disweb.dashflo.net'\n  })\n</script>",
+          "_anchor": "custom-html-4",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "rGiYHDQJkZ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "issues-requests.html": {
+      "settings": {
+        "meta_descr": "The best discord bot around",
+        "title": "Hypen｜Issues/Requests",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": "deltapi-code-editor",
+          "_isSecondary": true,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section": {
+              "text-align": "center",
+              "color": "#fff"
+            }
+          },
+          "_name": "custom-html",
+          "_customHTML": "<div class=\"wrapper fadeInDown\">\n  <div id=\"formContent\">\n    <!-- Tabs Titles -->\n    <h2 class=\"active\"> Sign In </h2>\n    <h2 class=\"inactive underlineHover\">Sign Up </h2>\n\n    <!-- Icon -->\n    <div class=\"fadeIn first\">\n      <img src=\"http://danielzawadzki.com/codepen/01/icon.svg\" id=\"icon\" alt=\"User Icon\" />\n    </div>\n\n    <!-- Login Form -->\n    <form>\n      <input type=\"text\" id=\"login\" class=\"fadeIn second\" name=\"login\" placeholder=\"login\">\n      <input type=\"text\" id=\"password\" class=\"fadeIn third\" name=\"login\" placeholder=\"password\">\n      <input type=\"submit\" class=\"fadeIn fourth\" value=\"Log In\">\n    </form>\n\n    <!-- Remind Passowrd -->\n    <div id=\"formFooter\">\n      <a class=\"underlineHover\" href=\"#\">Forgot Password?</a>\n    </div>\n\n  </div>\n</div>",
+          "_anchor": "custom-html-4",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "rGiYnv4KqJ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
